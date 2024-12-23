@@ -53,6 +53,9 @@ func KMeans(points []Point, options KMeansOptions) []Cluster {
 		options.GetDistance = GetEuclideanDistance
 	}
 	clusters := make([]Cluster, options.K)
+	if len(points) == 0 {
+		return clusters
+	}
 	centroids := initializeCentroids(points, options)
 	for iter := 0; iter < options.MaxIterations; iter++ {
 		// Создаем пустые кластеры
