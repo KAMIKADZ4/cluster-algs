@@ -27,7 +27,7 @@ func findMedian(S [][]float64) float64 {
 
 func AffinityPropagation(points []Point, options AffinityPropagationOptions) []Cluster {
 	if options.GetDistance == nil {
-		options.GetDistance = getEuclideanDistance
+		options.GetDistance = GetEuclideanDistance
 	}
 
 	n := len(points)
