@@ -11,7 +11,7 @@ type HierarchicalClusteringOptions struct {
 
 func HierarchicalClustering(points []Point, options HierarchicalClusteringOptions) []Cluster {
 	if options.GetDistance == nil {
-		options.GetDistance = getEuclideanDistance
+		options.GetDistance = GetEuclideanDistance
 	}
 	// Инициализируем каждый элемент как отдельный кластер
 	clusters := make([]Cluster, len(points))
