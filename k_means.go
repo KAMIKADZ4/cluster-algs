@@ -50,7 +50,7 @@ func KMeans(points []Point, options KMeansOptions) []Cluster {
 		options.MaxIterations = 100
 	}
 	if options.GetDistance == nil {
-		options.GetDistance = getEuclideanDistance
+		options.GetDistance = GetEuclideanDistance
 	}
 	clusters := make([]Cluster, options.K)
 	centroids := initializeCentroids(points, options)
