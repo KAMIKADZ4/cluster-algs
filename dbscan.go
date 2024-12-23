@@ -43,7 +43,7 @@ func getNearPointIndexes(targetPoint Point, points []Point, options DbscanOption
 
 func Dbscan(points []Point, options DbscanOptions) ([]Cluster, []Point) {
 	if options.GetDistance == nil {
-		options.GetDistance = getEuclideanDistance
+		options.GetDistance = GetEuclideanDistance
 	}
 
 	clusters := []Cluster{}
