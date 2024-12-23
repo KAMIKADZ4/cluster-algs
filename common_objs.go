@@ -20,11 +20,11 @@ func calculateCentroid(points []Point) Point {
 	}
 	return Point{X: sumX / float64(len(points)), Y: sumY / float64(len(points))}
 }
-func getEuclideanDistance(p1, p2 Point) float64 {
+func GetEuclideanDistance(p1, p2 Point) float64 {
 	return math.Sqrt(math.Pow(p1.X-p2.X, 2) + math.Pow(p1.Y-p2.Y, 2))
 }
 
-func getHaversineDistance(p1, p2 Point) float64 {
+func GetHaversineDistance(p1, p2 Point) float64 {
 	// Радиус Земли в метрах
 	const R = 6371000
 	// Преобразование градусов в радианы
